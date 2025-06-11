@@ -53,6 +53,8 @@ def is_prime(n):
 def fibonacci(n):
     if n <= 0:
         return [0]
+    elif n == 1:
+        return [0, 1]
     fib_sequence = [0, 1]
     while len(fib_sequence) < n:
         fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
@@ -82,7 +84,10 @@ def mode(numbers):
         frequency[number] = frequency.get(number, 0) + 1
     max_freq = max(frequency.values())
     modes = [num for num, freq in frequency.items() if freq == max_freq]
-    return min(modes)  # return smallest if multiple modes
+    if len(modes) == len(numbers):  # every number appears only once
+        return 0
+    return min(modes)  # return smallest mode if multiple
+
 
 def variance(numbers):
     if not numbers:
