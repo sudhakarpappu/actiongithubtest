@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import src.math_operation as s
 def test_lcm():
     assert s.lcm(4, 6) == 12
