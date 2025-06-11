@@ -21,7 +21,8 @@ def test_fibonacci():
     assert s.fibonacci(0) == [0]
     assert s.fibonacci(1) == [0, 1]
     assert s.fibonacci(5) == [0, 1, 1, 2, 3]
-    assert s.fibonacci(10) == [0, 1, 1, 2, 3, 5, 8]
+    assert s.fibonacci(10) == [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
 
 def test_average():
     assert s.average([1, 2, 3, 4, 5]) == 3.0

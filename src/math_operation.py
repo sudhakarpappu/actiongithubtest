@@ -84,9 +84,10 @@ def mode(numbers):
         frequency[number] = frequency.get(number, 0) + 1
     max_freq = max(frequency.values())
     modes = [num for num, freq in frequency.items() if freq == max_freq]
-    if len(modes) == len(numbers):  # every number appears only once
+    if len(modes) == len(numbers) and len(modes) > 1:
         return 0
-    return min(modes)  # return smallest mode if multiple
+    return min(modes)
+e
 
 
 def variance(numbers):
