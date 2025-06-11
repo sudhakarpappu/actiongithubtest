@@ -87,7 +87,7 @@ def mode(numbers):
     if len(modes) == len(numbers) and len(modes) > 1:
         return 0
     return min(modes)
-e
+
 
 
 def variance(numbers):
